@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .blurred-background {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 8rem 1rem; /* Increased height for larger appearance */
+      background: url('blurbackground.png') no-repeat center center/cover;
+    }
+
+    .blurred-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .blurred-background h1, .blurred-background p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .image-section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .image-section .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5rem;
+      justify-content: center;
+    }
+
+    .image-section .images img {
+      width: calc(25% - 0.05rem); /* Fixed width for three images per row */
+      height: 250px; /* Fixed height for consistent rectangle shape */
+      object-fit: contain; /* Ensure images fit the rectangle shape */
+      border-radius: 3px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vision Vox</h1>
+  </header>
+
+  <div class="blurred-background">
+    <h1>Try It Yourself!</h1>
+    <p>Use our extension to test on sample images below or navigate through our interactive demo.</p>
+  </div>
+
+  <section class="image-section">
+    <h2>Test Images</h2>
+    <p>After enabling the browser extension, hover over or click on Describe Image to test.</p>
+    <p style="padding-top:10px"></p>
+    <div class="images">
+      <img src="23.png" alt="Image 1">
+      <img src="24.png" alt="Image 2">
+      <img src="25.png" alt="Image 3">
+      <img src="26.png" alt="Image 4">
+      <img src="27.png" alt="Image 5">
+      <img src="28.png" alt="Image 6">
+    </div>
+  </section>
+
+  <footer>
+    <h2>Enhance Accessibility Today</h2>
+    <p>Revolutionize how you deliver content with our real-time visual accessibility solutions.</p>
+  </footer>
+</body>
+</html>

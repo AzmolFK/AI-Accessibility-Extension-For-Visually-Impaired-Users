@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "AI-Powered Accessibility Tool",
+    "version": "1.0",
+    "description": "A browser extension to enhance web accessibility for visually impaired users.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["<all_urls>", "file://*/*", "http://localhost/*", "https://localhost/*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+      }
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
